@@ -1,4 +1,4 @@
-build/test-obj/src/platform/platform_window.o: \
+build/linux-amd64/obj/platform/platform_window.o: \
  src/platform/platform_window.c src/platform/platform_window.h \
  src/core/memory.h src/platform/platform.h
 src/platform/platform_window.h:

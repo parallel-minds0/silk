@@ -1,6 +1,13 @@
 CC ?= cc
 
-BUILD_DIR := build
+TARGET ?= linux-amd64
+SUPPORTED_TARGETS := linux-amd64
+
+ifneq ($(TARGET),$(SUPPORTED_TARGETS))
+$(error Unsupported TARGET '$(TARGET)'; supported: $(SUPPORTED_TARGETS))
+endif
+
+BUILD_DIR := build/$(TARGET)
 OBJECT_DIR := $(BUILD_DIR)/obj
 TEST_OBJECT_DIR := $(BUILD_DIR)/test-obj
 
@@ -51,6 +58,6 @@ test: $(TEST_APP)
 	$(TEST_APP)
 
 clean:
-	rm -rf $(BUILD_DIR)
+	rm -rf -- build/$(TARGET)
 
 -include $(DEPENDENCIES)
