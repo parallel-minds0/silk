@@ -1,0 +1,3 @@
+struct silk_renderer {
+
+}
