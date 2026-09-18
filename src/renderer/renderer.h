@@ -58,7 +58,7 @@ silk_renderer_clear(struct silk_renderer *renderer,
 void
 silk_renderer_fill_rect(struct silk_renderer *renderer,
     const struct silk_rect *rect,
-    struct silk_color color)
+    struct silk_color color);
 
 /*
  * Presents the frame through the platform.
