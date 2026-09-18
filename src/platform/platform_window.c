@@ -3,6 +3,9 @@
 #include "core/memory.h"
 #include "platform/platform.h"
 
+#include "core/result.h"
+#include "platform/platform_frame.h"
+
 struct silk_platform_window {
 	int32_t width;
 	int32_t height;
